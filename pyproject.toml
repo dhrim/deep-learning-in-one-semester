@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dlbook"
+version = "0.1.0"
+description = "「한 학기 딥러닝 교과서」 실습 공통 유틸리티"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "임도형" }]
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+keras      = ["keras==3.15.1", "tensorflow-cpu==2.21.0"]
+tensorflow = ["tensorflow-cpu==2.21.0"]
+pytorch    = ["torch==2.14.0"]
+dev        = ["pytest>=8", "nbclient>=0.10", "nbformat>=5.10", "jupyter"]
+
+[tool.setuptools.packages.find]
+include = ["dlbook*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

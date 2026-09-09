@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+*.egg-info/
+.DS_Store
+
+# 그림: SVG만 올린다. PNG는 make_figures.py로 다시 만든다
+figures/*.png
+!figures/.gitkeep
+
+# 데이터셋·사전학습 가중치는 올리지 않는다 (424MB, GitHub 파일 한도 초과)
+# 받는 방법은 data/README.md 에 적혀 있다
+data/*
+!data/README.md

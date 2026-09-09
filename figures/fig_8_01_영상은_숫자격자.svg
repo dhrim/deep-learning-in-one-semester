@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="579.218909pt" height="315.54pt" viewBox="0 0 579.218909 315.54" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-08T02:24:16.740458</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 315.54 
+L 579.218909 315.54 
+L 579.218909 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 8.64 306.9 
+L 256.06 306.9 
+L 256.06 59.48 
+L 8.64 59.48 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p4e04568133)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAYAAAAWbORAAAAH0UlEQVR4nO3cz4vNbRzG8XueTEikyUKKkqmZRCkjv21sWFhIFvIHKFlb2JyazfwFVvazGhs0bAYTO2rYzELkR1YKC0opfS2fzSPPh7kcM+f1Wl/n3N/Vu3t1D3Vd1zUAltw//f4AgJVKYAFCBBYgRGABQgQWIERgAUIEFiBEYAFCBBYgRGABQgQWIGRVvz+AP2dqaqq0v3LlSmm/Z8+e0r611ubm5kr7kZGR8hnQL26wACECCxAisAAhAgsQIrAAIQILECKwACECCxAisAAhAgsQIrAAIQILEOKxF5bMkydPyr/Zv39/aX/z5s3Sfnx8vLSHpeQGCxAisAAhAgsQIrAAIQILECKwACECCxAisAAhAgsQIrAAIQILEOItggFy5MiR0n79+vWl/adPn0r71lp7/vx5af/58+fyGdAvbrAAIQILECKwACECCxAisAAhAgsQIrAAIQILECKwACECCxAisAAh3iIYIEePHi3tL126VNpPTU2V9rDSucEChAgsQIjAAoQILECIwAKECCxAiMAChAgsQIjAAoQILECIwAKEeIuAH7pw4UJpPz09XT7j9evXpf38/Hxpv3fv3tK+tdaGhobKv4H/4gYLECKwACECCxAisAAhAgsQIrAAIQILECKwACECCxAisAAhAgsQIrAAIUNd13X9/ghWhmfPnpV/MzY2FviSf924caP8m1OnTgW+hEHkBgsQIrAAIQILECKwACECCxAisAAhAgsQIrAAIQILECKwACECCxDiLQKWzLdv38q/OXDgQGn/+PHj0n50dLS0b621O3fulPY7duwon8FgcIMFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUI8RYBffX+/fvSft++faX9y5cvS/vWWjt37lxpPz09XT6DweAGCxAisAAhAgsQIrAAIQILECKwACECCxAisAAhAgsQIrAAIQILECKwACEee2FZuXXrVml/+vTp8hnr1q0r7W/fvl3aHzx4sLRn+XKDBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCPEWASva5ORk+Te9Xq+0P3nyZGk/Oztb2rN8ucEChAgsQIjAAoQILECIwAKECCxAiMAChAgsQIjAAoQILECIwAKEeIuAFe3Lly/l3xw+fLi0X1xcLO3v3r1b2h86dKi05+/hBgsQIrAAIQILECKwACECCxAisAAhAgsQIrAAIQILECKwACECCxCyqt8fAElr164t/+bEiROl/cLCQmnf6/VK+9nZ2dK+tdaGh4fLv2HpucEChAgsQIjAAoQILECIwAKECCxAiMAChAgsQIjAAoQILECIwAKECCxAyFDXdV2/PwL+Jg8fPiztjx8/Xtp//fq1tJ+fny/tW2vt2LFj5d+w9NxgAUIEFiBEYAFCBBYgRGABQgQWIERgAUIEFiBEYAFCBBYgRGABQrxFAL+p1+uV9pOTk6X9xo0bS/vWWnvw4EFpv2vXrvIZ/JwbLECIwAKECCxAiMAChAgsQIjAAoQILECIwAKECCxAiMAChAgsQIi3COA3vXv3rrTfvXt39P9ba21mZqa0P3PmTPkMfs4NFiBEYAFCBBYgRGABQgQWIERgAUIEFiBEYAFCBBYgRGABQgQWIERgAUI89gJ/2PXr10v7s2fPls+oPihz79690n5kZKS0H1RusAAhAgsQIrAAIQILECKwACECCxAisAAhAgsQIrAAIQILECKwACHeIuCHPn78WNovLCyUz5iYmCjtHz16VD4jbfXq1aX92NhYaT8+Pl7at9bahw8fSvurV6+W9hcvXiztB5UbLECIwAKECCxAiMAChAgsQIjAAoQILECIwAKECCxAiMAChAgsQMiqfn/AcjE3N1faP336tLTfuXNnad9aa4uLi6V99a2A+/fvl/Zv374t7Vtrbdu2baX9mzdvymekDQ8Pl/abNm0q7avvCvyKFy9exM8YRG6wACECCxAisAAhAgsQIrAAIQILECKwACECCxAisAAhAgsQIrAAIUNd13X9/ojlYPv27aX9q1evMh/yB23YsKG0/5X3FMjYunVraX/58uXSfmJiorQfVG6wACECCxAisAAhAgsQIrAAIQILECKwACECCxAisAAhAgsQIrAAIQILEOKxl/9pZmamtL927Vppv2XLltK+tdbWrFlT2p8/f76037x5c2k/Ojpa2sNK5wYLECKwACECCxAisAAhAgsQIrAAIQILECKwACECCxAisAAhAgsQ4i0CgBA3WIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWIAQgQUIEViAEIEFCBFYgBCBBQgRWICQ7xHQ5DQv4v78AAAAAElFTkSuQmCC" id="imageec25c8b143" transform="scale(1 -1) translate(0 -247.68)" x="8.64" y="-59.22" width="247.68" height="247.68"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 88.167857 139.007857 
+L 141.186429 139.007857 
+L 141.186429 192.026429 
+L 88.167857 192.026429 
+L 88.167857 139.007857 
+z
+" clip-path="url(#p4e04568133)" style="fill: none; stroke: #c1443c; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_4">
+    <path d="M 8.64 306.9 
+L 8.64 59.48 
+" style="fill: none; stroke: #4a4f55; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 256.06 306.9 
+L 256.06 59.48 
+" style="fill: none; stroke: #4a4f55; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 8.64 306.9 
+L 256.06 306.9 
+" style="fill: none; stroke: #4a4f55; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 8.64 59.48 
+L 256.06 59.48 
+" style="fill: none; stroke: #4a4f55; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 11.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="132.35" y="51.48" transform="rotate(-0 132.35 51.48)">사람이 보는 것</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_8">
+    <path d="M 323.158909 306.9 
+L 570.578909 306.9 
+L 570.578909 59.48 
+L 323.158909 59.48 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p1929634ac7)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAYAAAAWbORAAAAE8ElEQVR4nO3WwW2EQAAEQdu6OIiCOC8m/jw2B8SfEHAS16x0qopgXq35ve/7/gHg4/5mDwD4VgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkReswfwOdd1zZ6QG2PMnpBb13X2hEfs+z57Qs6DBYgILEBEYAEiAgsQEViAiMACRAQWICKwABGBBYgILEBEYAEiAgsQEViAiMACRAQWICKwABGBBYgILEBEYAEiAgsQEViAiMACRAQWICKwABGBBYgILEBEYAEiAgsQEViAiMACRAQWICKwABGBBYgILEBEYAEiAgsQEViAiMACRAQWICKwABGBBYgILEBEYAEiAgsQEViAiMACRAQWICKwABGBBYgILEBEYAEiAgsQEViAiMACRAQWICKwABGBBYi83u/37A25McbsCY/Ytm32hNx5nrMn5JZlmT3hEcdxzJ6Q82ABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxARGABIgILEBFYgIjAAkQEFiAisAARgQWICCxA5B+2jBrq4NRBDwAAAABJRU5ErkJggg==" id="image9f1cdf56c8" transform="scale(1 -1) translate(0 -247.68)" x="323.158909" y="-59.22" width="247.68" height="247.68"/>
+   </g>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4"/>
+   <g id="patch_9">
+    <path d="M 323.158909 306.9 
+L 323.158909 59.48 
+" style="fill: none; stroke: #c1443c; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 570.578909 306.9 
+L 570.578909 59.48 
+" style="fill: none; stroke: #c1443c; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 323.158909 306.9 
+L 570.578909 306.9 
+" style="fill: none; stroke: #c1443c; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 323.158909 59.48 
+L 570.578909 59.48 
+" style="fill: none; stroke: #c1443c; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="343.777242" y="82.739779" transform="rotate(-0 343.777242 82.739779)">114</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #ffffff" x="385.013909" y="82.739779" transform="rotate(-0 385.013909 82.739779)">163</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #ffffff" x="426.250576" y="82.739779" transform="rotate(-0 426.250576 82.739779)">227</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #ffffff" x="467.487242" y="82.739779" transform="rotate(-0 467.487242 82.739779)">254</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #ffffff" x="508.723909" y="82.739779" transform="rotate(-0 508.723909 82.739779)">225</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #ffffff" x="549.960576" y="82.739779" transform="rotate(-0 549.960576 82.739779)">254</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="343.777242" y="123.976445" transform="rotate(-0 343.777242 123.976445)">0</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="385.013909" y="123.976445" transform="rotate(-0 385.013909 123.976445)">0</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="426.250576" y="123.976445" transform="rotate(-0 426.250576 123.976445)">17</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="467.487242" y="123.976445" transform="rotate(-0 467.487242 123.976445)">66</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="508.723909" y="123.976445" transform="rotate(-0 508.723909 123.976445)">14</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="549.960576" y="123.976445" transform="rotate(-0 549.960576 123.976445)">67</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="343.777242" y="165.213112" transform="rotate(-0 343.777242 165.213112)">0</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="385.013909" y="165.213112" transform="rotate(-0 385.013909 165.213112)">0</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="426.250576" y="165.213112" transform="rotate(-0 426.250576 165.213112)">0</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="467.487242" y="165.213112" transform="rotate(-0 467.487242 165.213112)">0</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="508.723909" y="165.213112" transform="rotate(-0 508.723909 165.213112)">0</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="549.960576" y="165.213112" transform="rotate(-0 549.960576 165.213112)">0</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="343.777242" y="206.449779" transform="rotate(-0 343.777242 206.449779)">0</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="385.013909" y="206.449779" transform="rotate(-0 385.013909 206.449779)">0</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="426.250576" y="206.449779" transform="rotate(-0 426.250576 206.449779)">0</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="467.487242" y="206.449779" transform="rotate(-0 467.487242 206.449779)">0</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="508.723909" y="206.449779" transform="rotate(-0 508.723909 206.449779)">0</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="549.960576" y="206.449779" transform="rotate(-0 549.960576 206.449779)">0</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="343.777242" y="247.686445" transform="rotate(-0 343.777242 247.686445)">0</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="385.013909" y="247.686445" transform="rotate(-0 385.013909 247.686445)">0</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="426.250576" y="247.686445" transform="rotate(-0 426.250576 247.686445)">0</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="467.487242" y="247.686445" transform="rotate(-0 467.487242 247.686445)">0</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="508.723909" y="247.686445" transform="rotate(-0 508.723909 247.686445)">0</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="549.960576" y="247.686445" transform="rotate(-0 549.960576 247.686445)">0</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="343.777242" y="288.923112" transform="rotate(-0 343.777242 288.923112)">0</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="385.013909" y="288.923112" transform="rotate(-0 385.013909 288.923112)">0</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="426.250576" y="288.923112" transform="rotate(-0 426.250576 288.923112)">0</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="467.487242" y="288.923112" transform="rotate(-0 467.487242 288.923112)">0</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="508.723909" y="288.923112" transform="rotate(-0 508.723909 288.923112)">0</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="549.960576" y="288.923112" transform="rotate(-0 549.960576 288.923112)">0</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 11.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="446.868909" y="51.48" transform="rotate(-0 446.868909 51.48)">컴퓨터가 보는 것 (0~255)</text>
+   </g>
+  </g>
+  <g id="text_39">
+   <text style="font-size: 12px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="306.876182" y="17.664375" transform="rotate(-0 306.876182 17.664375)">28 × 28 = 숫자 784개</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4e04568133">
+   <rect x="8.64" y="59.48" width="247.42" height="247.42"/>
+  </clipPath>
+  <clipPath id="p1929634ac7">
+   <rect x="323.158909" y="59.48" width="247.42" height="247.42"/>
+  </clipPath>
+ </defs>
+</svg>

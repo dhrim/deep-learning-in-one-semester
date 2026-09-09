@@ -1,0 +1,77 @@
+name: notebooks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 17 * * 0"        # 매주 일요일 02:00 KST — 전체 실행
+
+jobs:
+  # ── PR마다: 빠른 검사만 ──────────────────────────────────────────
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q nbformat
+      - name: 플랫폼 중립 8규칙
+        run: python tools/lint_notebooks.py notebooks/
+      - name: 세 판 절 구성 대조
+        run: python tools/check_parity.py
+
+  # ── PR마다: 스모크 실행 (epoch 1, 데이터 1/20) ───────────────────
+  smoke:
+    needs: lint
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        edition: [keras, tensorflow, pytorch]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          pip install -q -r requirements-${{ matrix.edition }}.txt
+          pip install -q -e .
+          pip install -q nbclient nbformat ipykernel
+      - name: 캐시된 데이터셋 복원
+        uses: actions/cache@v4
+        with:
+          path: ~/.dlbook/datasets
+          key: dlbook-datasets-v1
+      - name: 스모크 실행
+        run: python tools/run_notebooks.py notebooks/${{ matrix.edition }} --smoke --timeout 900
+
+  # ── 주 1회: 전체 실행 + 본문 수치 대조 ───────────────────────────
+  full:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        edition: [keras, tensorflow, pytorch]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          pip install -q -r requirements-${{ matrix.edition }}.txt
+          pip install -q -e .
+          pip install -q nbclient nbformat ipykernel
+      - uses: actions/cache@v4
+        with:
+          path: ~/.dlbook/datasets
+          key: dlbook-datasets-v1
+      - name: 전체 실행 + expected.json 대조
+        run: |
+          python tools/run_notebooks.py notebooks/${{ matrix.edition }} \
+            --check-expected --timeout 900 --rtol 0.05
+      - name: 실패하면 원고를 고쳐야 합니다
+        if: failure()
+        run: |
+          echo "::error::본문의 수치와 실행 결과가 어긋났습니다."
+          echo "원고를 고치거나, 값이 바뀐 것이 맞으면 --update-expected 로 갱신하십시오."

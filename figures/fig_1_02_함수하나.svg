@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="441.36pt" height="178.056pt" viewBox="0 0 441.36 178.056" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-08T02:16:23.560477</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 178.056 
+L 441.36 178.056 
+L 441.36 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 135.797565 82.037739 
+Q 146.467719 82.037739 155.684429 82.037739 
+" style="fill: none; stroke: #26282b; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 150.484429 79.437739 
+L 155.684429 82.037739 
+L 150.484429 84.637739 
+z
+" style="fill: #26282b; stroke: #26282b; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 284.222329 82.037739 
+Q 295.77587 82.037739 305.875967 82.037739 
+" style="fill: none; stroke: #26282b; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 300.675967 79.437739 
+L 305.875967 82.037739 
+L 300.675967 84.637739 
+z
+" style="fill: #26282b; stroke: #26282b; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 26.6634 102.134739 
+L 124.9086 102.134739 
+Q 127.029 102.134739 127.029 100.037661 
+L 127.029 64.037817 
+Q 127.029 61.940739 124.9086 61.940739 
+L 26.6634 61.940739 
+Q 24.543 61.940739 24.543 64.037817 
+L 24.543 100.037661 
+Q 24.543 102.134739 26.6634 102.134739 
+z
+" clip-path="url(#p17f594c59e)" style="fill: #dce8f0; stroke: #2e6f95; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 166.2564 108.251217 
+L 275.1036 108.251217 
+Q 277.224 108.251217 277.224 106.154139 
+L 277.224 57.921339 
+Q 277.224 55.824261 275.1036 55.824261 
+L 166.2564 55.824261 
+Q 164.136 55.824261 164.136 57.921339 
+L 164.136 106.154139 
+Q 164.136 108.251217 166.2564 108.251217 
+z
+" clip-path="url(#p17f594c59e)" style="fill: #f2f5f8; stroke: #26282b; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 316.4514 102.134739 
+L 414.6966 102.134739 
+Q 416.817 102.134739 416.817 100.037661 
+L 416.817 64.037817 
+Q 416.817 61.940739 414.6966 61.940739 
+L 316.4514 61.940739 
+Q 314.331 61.940739 314.331 64.037817 
+L 314.331 100.037661 
+Q 314.331 102.134739 316.4514 102.134739 
+z
+" clip-path="url(#p17f594c59e)" style="fill: #f4dad7; stroke: #c1443c; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 10px; font-family: 'NanumGothic'; fill: #26282b" transform="translate(66.386 79.25977)">입력</text>
+    <text style="font-size: 10px; font-family: 'NanumGothic'; fill: #26282b" transform="translate(45.856312 90.376645)">(숫자 여러 개)</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="220.68" y="85.652349" transform="rotate(-0 220.68 85.652349)">신경망</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10px; font-family: 'NanumGothic'; fill: #26282b" transform="translate(356.174 79.25977)">출력</text>
+    <text style="font-size: 10px; font-family: 'NanumGothic'; fill: #26282b" transform="translate(335.644312 90.376645)">(숫자 여러 개)</text>
+   </g>
+   <g id="text_4">
+    <!-- $y = f(x)$ -->
+    <g style="fill: #b8860b" transform="translate(197.605 124.67833)">
+     <text>
+      <tspan x="0" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #b8860b">y</tspan>
+      <tspan x="23.651367" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #b8860b">f</tspan>
+      <tspan x="33.299805" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #b8860b">x</tspan>
+      <tspan x="10.226074" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #b8860b">=</tspan>
+      <tspan x="28.228027" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #b8860b">(</tspan>
+      <tspan x="40.993164" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #b8860b">)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #6b7178" x="220.68" y="154.736452" transform="rotate(-0 220.68 154.736452)">안이 아무리 복잡해도 하는 일은 이것뿐입니다</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.8px; font-family: 'NanumGothic'; text-anchor: middle; fill: #6b7178" x="75.786" y="42.892278" transform="rotate(-0 75.786 42.892278)">사과의 무게·색</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8.8px; font-family: 'NanumGothic'; text-anchor: middle; fill: #6b7178" x="365.574" y="42.892278" transform="rotate(-0 365.574 42.892278)">익었을 확률</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p17f594c59e">
+   <rect x="8.64" y="8.64" width="424.08" height="160.776"/>
+  </clipPath>
+ </defs>
+</svg>

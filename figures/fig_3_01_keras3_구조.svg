@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="441.36pt" height="211.32pt" viewBox="0 0 441.36 211.32" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-08T04:07:38.766957</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 211.32 
+L 441.36 211.32 
+L 441.36 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 93.601245 106.86613 
+Q 133.072406 90.067387 171.206203 73.837819 
+" style="fill: none; stroke: #8a939c; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 165.403337 73.481816 
+L 171.206203 73.837819 
+L 167.439681 78.26651 
+z
+" style="fill: #8a939c; stroke: #8a939c; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 220.68 104.428216 
+Q 220.68 90.064994 220.68 77.155216 
+" style="fill: none; stroke: #8a939c; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 218.08 82.355216 
+L 220.68 77.155216 
+L 223.28 82.355216 
+z
+" style="fill: #8a939c; stroke: #8a939c; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 347.758755 106.86613 
+Q 308.287594 90.067387 270.153797 73.837819 
+" style="fill: none; stroke: #8a939c; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 273.920319 78.26651 
+L 270.153797 73.837819 
+L 275.956663 73.481816 
+z
+" style="fill: #8a939c; stroke: #8a939c; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 130.9164 70.14375 
+L 310.4436 70.14375 
+Q 312.564 70.14375 312.564 68.06475 
+L 312.564 35.84025 
+Q 312.564 33.76125 310.4436 33.76125 
+L 130.9164 33.76125 
+Q 128.796 33.76125 128.796 35.84025 
+L 128.796 68.06475 
+Q 128.796 70.14375 130.9164 70.14375 
+z
+" clip-path="url(#p2135210457)" style="fill: #f4dad7; stroke: #c1443c; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 39.0324 146.37375 
+L 140.8116 146.37375 
+Q 142.932 146.37375 142.932 144.29475 
+L 142.932 112.07025 
+Q 142.932 109.99125 140.8116 109.99125 
+L 39.0324 109.99125 
+Q 36.912 109.99125 36.912 112.07025 
+L 36.912 144.29475 
+Q 36.912 146.37375 39.0324 146.37375 
+z
+" clip-path="url(#p2135210457)" style="fill: #dce8f0; stroke: #2e6f95; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 169.7904 146.37375 
+L 271.5696 146.37375 
+Q 273.69 146.37375 273.69 144.29475 
+L 273.69 112.07025 
+Q 273.69 109.99125 271.5696 109.99125 
+L 169.7904 109.99125 
+Q 167.67 109.99125 167.67 112.07025 
+L 167.67 144.29475 
+Q 167.67 146.37375 169.7904 146.37375 
+z
+" clip-path="url(#p2135210457)" style="fill: #dce8f0; stroke: #2e6f95; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 300.5484 146.37375 
+L 402.3276 146.37375 
+Q 404.448 146.37375 404.448 144.29475 
+L 404.448 112.07025 
+Q 404.448 109.99125 402.3276 109.99125 
+L 300.5484 109.99125 
+Q 298.428 109.99125 298.428 112.07025 
+L 298.428 144.29475 
+Q 298.428 146.37375 300.5484 146.37375 
+z
+" clip-path="url(#p2135210457)" style="fill: #dce8f0; stroke: #2e6f95; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 12.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="220.68" y="55.428086" transform="rotate(-0 220.68 55.428086)">Keras 3  —  상위 API</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="89.922" y="131.380039" transform="rotate(-0 89.922 131.380039)">TensorFlow</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 11.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="220.68" y="131.379141" transform="rotate(-0 220.68 131.379141)">PyTorch</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 11.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #26282b" x="351.438" y="131.380039" transform="rotate(-0 351.438 131.380039)">JAX</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 10px; font-family: 'NanumGothic'; text-anchor: middle; fill: #4a4f55" x="220.68" y="166.2975" transform="rotate(-0 220.68 166.2975)">엔진 — 실제 계산은 이 셋 중 하나가 합니다</text>
+   </g>
+   <g id="text_6">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #6b7178" x="220.68" y="190.5525" transform="rotate(-0 220.68 190.5525)">같은 Keras 코드가 엔진만 갈아 끼워 그대로 돕니다</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2135210457">
+   <rect x="8.64" y="8.64" width="424.08" height="194.04"/>
+  </clipPath>
+ </defs>
+</svg>
