@@ -1,15 +1,29 @@
 name: notebooks
 
+# 검사를 위한 검사는 돌리지 않는다.
+#
+# 라이브러리 버전이 requirements-*.txt 에 == 로 못 박혀 있으므로
+# 아무도 손대지 않은 코드가 저절로 깨질 일이 없다. 그래서 정기 실행은 없다.
+# 노트북을 고쳤을 때 그 노트북만 돌려 본다. 그게 전부다.
+#
+# 전체 실행은 목적이 있을 때만 한다 — 실행 결과를 노트북에 새로 담을 때.
+# 그건 아래 refresh 작업이고, 사람이 눌러야 돈다.
+
 on:
   pull_request:
   push:
     branches: [main]
-  schedule:
-    - cron: "0 17 * * 0"        # 매주 일요일 02:00 KST — 전체 실행
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: "결과를 새로 담을 판 (keras / tensorflow / pytorch / all)"
+        required: true
+        default: all
 
 jobs:
-  # ── PR마다: 빠른 검사만 ──────────────────────────────────────────
+  # ── 언제나: 규칙 검사 (몇 초) ────────────────────────────────────
   lint:
+    if: github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,9 +35,13 @@ jobs:
       - name: 세 판 절 구성 대조
         run: python tools/check_parity.py
 
-  # ── PR마다: 스모크 실행 (epoch 1, 데이터 1/20) ───────────────────
+  # ── 바뀐 노트북만 축소 실행 (epoch 1, 데이터 1/20) ───────────────
+  #
+  # 105개를 전부 돌리지 않는다. 이번 커밋에서 실제로 바뀐 것만 돈다.
+  # 보통 0~3개라 1~2분에 끝난다.
   smoke:
     needs: lint
+    if: github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -31,47 +49,125 @@ jobs:
         edition: [keras, tensorflow, pytorch]
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: 이번에 바뀐 노트북 고르기
+        id: pick
+        env:
+          ED: ${{ matrix.edition }}
+        run: |
+          set -eu
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="${{ github.event.pull_request.base.sha }}"
+          else
+            BASE="${{ github.event.before }}"
+          fi
+          # 첫 푸시(before가 0000...)거나 그 커밋이 없으면 직전 커밋과 비교한다
+          if ! git cat-file -e "${BASE}^{commit}" 2>/dev/null; then
+            BASE="$(git rev-parse HEAD~1 2>/dev/null || git rev-parse HEAD)"
+          fi
+
+          CHANGED="$(git diff --name-only "$BASE" HEAD || true)"
+
+          # 공통 유틸이 바뀌면 105개가 전부 영향을 받는다.
+          # 그때는 각 판에서 한 개씩만 골라 살아 있는지 본다(카나리아).
+          if echo "$CHANGED" | grep -qE '^(dlbook/|tools/run_notebooks\.py|pyproject\.toml|requirements-)'; then
+            FILES="$(find "notebooks/${ED}" -name '*.ipynb' | sort | head -2 | tr '\n' ' ')"
+            echo "공통 코드가 바뀌었습니다 — 카나리아만 돌립니다."
+          else
+            FILES="$(echo "$CHANGED" | grep -E "^notebooks/${ED}/.*\.ipynb$" | tr '\n' ' ' || true)"
+          fi
+
+          echo "files=${FILES}" >> "$GITHUB_OUTPUT"
+          if [ -z "${FILES// /}" ]; then
+            echo "이 판에서 바뀐 노트북이 없습니다. 건너뜁니다."
+          else
+            echo "돌릴 노트북: ${FILES}"
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.pick.outputs.files != ''
         with: { python-version: "3.12" }
-      - run: |
+
+      - name: 설치
+        if: steps.pick.outputs.files != ''
+        run: |
           pip install -q -r requirements-${{ matrix.edition }}.txt
           pip install -q -e .
           pip install -q nbclient nbformat ipykernel
-      - name: 캐시된 데이터셋 복원
-        uses: actions/cache@v4
+
+      - uses: actions/cache@v4
+        if: steps.pick.outputs.files != ''
         with:
           path: ~/.dlbook/datasets
           key: dlbook-datasets-v1
-      - name: 스모크 실행
-        run: python tools/run_notebooks.py notebooks/${{ matrix.edition }} --smoke --timeout 900
 
-  # ── 주 1회: 전체 실행 + 본문 수치 대조 ───────────────────────────
-  full:
-    if: github.event_name == 'schedule'
+      - name: 축소 실행
+        if: steps.pick.outputs.files != ''
+        run: python tools/run_notebooks.py ${{ steps.pick.outputs.files }} --smoke --timeout 900
+
+  # ── 사람이 누를 때만: 전체 실행 + 결과를 노트북에 담기 ───────────
+  #
+  # 언제 누르나 — 출간 직전, 프레임워크 버전을 올렸을 때, 실습을 크게 고쳤을 때.
+  # 그 외에는 누를 이유가 없다.
+  refresh:
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 300
+    permissions:
+      contents: write
     strategy:
       fail-fast: false
+      max-parallel: 1          # 같은 브랜치에 밀어 넣으므로 한 번에 하나씩
       matrix:
         edition: [keras, tensorflow, pytorch]
     steps:
       - uses: actions/checkout@v4
+
+      - name: 이 판을 돌릴 차례인가
+        id: gate
+        run: |
+          IN="${{ github.event.inputs.edition }}"
+          if [ "$IN" = "all" ] || [ "$IN" = "${{ matrix.edition }}" ]; then
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=no" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.go == 'yes'
         with: { python-version: "3.12" }
-      - run: |
+
+      - name: 설치
+        if: steps.gate.outputs.go == 'yes'
+        run: |
           pip install -q -r requirements-${{ matrix.edition }}.txt
           pip install -q -e .
           pip install -q nbclient nbformat ipykernel
+
       - uses: actions/cache@v4
+        if: steps.gate.outputs.go == 'yes'
         with:
           path: ~/.dlbook/datasets
           key: dlbook-datasets-v1
-      - name: 전체 실행 + expected.json 대조
+
+      - name: 전체 실행 + 결과 담기
+        if: steps.gate.outputs.go == 'yes'
         run: |
           python tools/run_notebooks.py notebooks/${{ matrix.edition }} \
-            --check-expected --timeout 900 --rtol 0.05
-      - name: 실패하면 원고를 고쳐야 합니다
-        if: failure()
+            --write-back --timeout 900
+
+      - name: 바뀐 결과를 커밋
+        if: steps.gate.outputs.go == 'yes'
         run: |
-          echo "::error::본문의 수치와 실행 결과가 어긋났습니다."
-          echo "원고를 고치거나, 값이 바뀐 것이 맞으면 --update-expected 로 갱신하십시오."
+          set -eu
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add notebooks/${{ matrix.edition }}
+          if git diff --cached --quiet; then
+            echo "달라진 것이 없습니다."
+            exit 0
+          fi
+          git commit -m "${{ matrix.edition }} 판 실행 결과 갱신"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

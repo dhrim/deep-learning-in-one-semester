@@ -63,22 +63,62 @@ def set_seed(seed: int = DEFAULT_SEED, deterministic: bool = True) -> int:
 
 
 def backend() -> str:
-    """현재 Keras 백엔드 이름. Keras를 아직 불러오지 않았으면 'none'."""
+    """현재 Keras 백엔드 이름.
+
+    Keras를 아직 불러오지 않았으면 앞으로 쓰일 값을 돌려준다.
+    KERAS_BACKEND 가 있으면 그것, 없으면 Keras 3의 기본값인 tensorflow.
+    """
     if "keras" not in sys.modules:
-        return os.environ.get("KERAS_BACKEND", "none")
+        # 파이토치 판에는 Keras가 아예 없다. 그런 환경에서 "tensorflow"라고
+        # 답하면 노트북 첫 줄이 거짓말을 한다.
+        if _installed_version("keras") == "-":
+            return "-"
+        return os.environ.get("KERAS_BACKEND", "tensorflow")
     return sys.modules["keras"].backend.backend()
 
 
-def versions() -> dict[str, str]:
-    """**이미 불러온** 라이브러리의 버전을 모아 반환한다.
+# 배포 이름이 import 이름과 다른 것들. tensorflow는 tensorflow-cpu로 깔린다.
+_DIST_NAMES = {
+    "tensorflow": ("tensorflow", "tensorflow-cpu", "tensorflow-macos"),
+    "torch": ("torch",),
+    "keras": ("keras",),
+    "numpy": ("numpy",),
+}
 
-    아직 import하지 않은 것은 "-"로 표시한다. 버전을 알아보겠다고
-    쓰지도 않을 라이브러리를 메모리에 올리지 않는다."""
+
+def _installed_version(name: str) -> str:
+    """**불러오지 않고** 설치된 버전만 읽는다.
+
+    importlib.metadata 는 패키지 메타데이터만 보므로 모듈을 메모리에
+    올리지 않는다. 쓰지도 않을 라이브러리로 수 GB를 쓰는 일이 없다.
+    """
+    from importlib.metadata import PackageNotFoundError, version
+
+    for dist in _DIST_NAMES.get(name, (name,)):
+        try:
+            return version(dist)
+        except PackageNotFoundError:
+            continue
+    return "-"
+
+
+def versions() -> dict[str, str]:
+    """이 노트북이 돌아간 환경의 버전을 모아 반환한다.
+
+    이미 불러온 것은 모듈에서 직접 읽고, 아직 안 불러온 것은
+    **설치된 버전**을 메타데이터에서 읽는다(모듈을 올리지 않는다).
+    설치돼 있지 않으면 "-".
+
+    노트북에 실행 결과를 담아 커밋하므로 이 한 줄은 그대로 교재에 실린다.
+    "이 결과는 어느 버전에서 나온 것인가"에 답하는 줄이라 비어 있으면 안 된다.
+    """
     import platform
 
     out = {"python": platform.python_version()}
     for name in ("numpy", "keras", "tensorflow", "torch"):
-        mod = sys.modules.get(name)          # 불러온 것만 보고한다
-        out[name] = getattr(mod, "__version__", "?") if mod else "-"
+        mod = sys.modules.get(name)
+        out[name] = (
+            getattr(mod, "__version__", "?") if mod else _installed_version(name)
+        )
     out["keras_backend"] = backend()
     return out

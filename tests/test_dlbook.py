@@ -4,7 +4,7 @@ import numpy as np
 import pytest
 
 import dlbook
-from dlbook import data, metrics, tracking
+from dlbook import data, metrics
 
 
 def test_split_is_disjoint():
@@ -74,10 +74,14 @@ def test_smoke_mode_shrinks(monkeypatch):
     assert dlbook.smoke.epochs(30) == 30
 
 
-def test_record_roundtrip(capsys):
-    dlbook.record("ch02_apple_test_acc", 0.9123)
-    out = capsys.readouterr().out
-    assert tracking.parse(out) == {"ch02_apple_test_acc": 0.9123}
+def test_record_prints_named_value(capsys):
+    """record 는 이름을 붙여 한 줄 찍고 값을 그대로 돌려준다.
+
+    이 한 줄이 노트북 출력에 남아 커밋되므로, 본문이 인용한 숫자가
+    어느 노트북의 어느 줄에서 나왔는지 이름으로 찾을 수 있다.
+    """
+    assert dlbook.record("ch02_apple_test_acc", 0.9123) == 0.9123
+    assert capsys.readouterr().out.strip() == "ch02_apple_test_acc = 0.9123"
 
 
 def test_set_seed_returns_seed():

@@ -4,8 +4,13 @@
 > 케라스 · 텐서플로 · 파이토치 세 판 · 설치 없이 실습
 
 이 저장소는 **「한 학기 딥러닝 교과서」의 실습 코드 전체**입니다.
-본문에 나오는 **모든 수치가 여기서 실제로 실행된 값**입니다.
-어느 숫자든 해당 노트북을 열어 직접 확인하실 수 있습니다.
+
+**노트북에 실행 결과가 담겨 있습니다.** 아무것도 설치하지 않고, 내려받지도 않고,
+노트북 파일을 클릭하기만 하면 그림과 숫자까지 그대로 보입니다.
+본문의 어느 숫자든 그것이 나온 노트북을 열어 그 자리에서 확인하실 수 있습니다.
+
+교재 채택을 검토하시는 강의자께 — 견본 도서를 기다리실 필요가 없습니다.
+`notebooks/` 아래 아무 파일이나 눌러 보십시오.
 
 ---
 
@@ -14,7 +19,7 @@
 | | |
 |---|---|
 | 노트북 | **3판 × 35개 = 105개** (Keras 3 / TensorFlow / PyTorch) |
-| 검증 수치 | **466개** (`expected.json`, 판별로 구분) |
+| 실행 결과 | **노트북 안에 담겨 있습니다** — 클릭하면 그대로 보입니다 |
 | 그림 | SVG 45장 (`figures/`) |
 | 공통 유틸 | `dlbook/` — **numpy만 씁니다. 프레임워크에 무관합니다** |
 
@@ -68,33 +73,44 @@ jupyter lab notebooks/keras/
 
 ---
 
-## 장별 노트북
+## 장별 노트북 — 눌러서 바로 보십시오
+
+**아무것도 설치하지 않아도 됩니다.** 아래 이름을 누르면 GitHub이 노트북을
+그대로 펼쳐 보여 줍니다. 코드만이 아니라 **그때 나온 그림과 숫자까지**
+담겨 있습니다. 계정도, 내려받기도 필요 없습니다.
+
+아래는 **케라스 판** 링크입니다. 텐서플로 판과 파이토치 판은 주소에서
+`keras` 를 `tensorflow` 또는 `pytorch` 로 바꾸면 됩니다. 파일 이름과 절 구성은
+세 판이 같습니다.
 
 | 장 | 노트북 | 무엇을 보이는가 |
 |:--:|---|---|
-| 2 | `ch02_delta`, `ch02_perceptron`, `ch02_xor` | 델타 규칙 → 프레임워크, XOR |
-| 3 | `ch03_three_frameworks`, `ch03_backend_swap` | 세 판 대조, Keras 백엔드 전환 |
-| 5 | `ch05_learning_rate`, `ch05_depth`, `ch05_init` | **깊이의 벽은 학습률이었다** |
-| 6 | `ch06_overfitting`, `ch06_regularization`, `ch06_batchnorm` | 규제, 배치 정규화의 진짜 일 |
-| 7 | `ch07_metrics`, `ch07_selection_bias` | **선택 편향은 「몇 번 골랐나」** |
-| 8 | `ch08_dnn_vs_cnn`, `ch08_no_activation`, `ch08_mnist` | **활성화를 빼도 최대 풀링이 비선형** |
-| 9 | `ch09_transfer`, `ch09_pretrained`, `ch09_gradcam` | 전이학습, Grad-CAM |
-| 10 | `ch10_memory`, `ch10_lr`, `ch10_seed`, `ch10_forecast` | **★ 시드만 바꿔도 0.46↔1.00** |
-| 11 | `ch11_representation`, `ch11_embedding_space` | **임베딩만으로는 순서를 못 본다** |
-| 12 | `ch12_attention`, `ch12_length`, `ch12_lr_trap`, `ch12_weights` | **어텐션도 순서를 못 본다 → 위치 부호화** |
-| 13 | `ch13_autoencoder`, `ch13_denoise`, `ch13_anomaly`, `ch13_anomaly_ood` | **선형 AE = PCA (넷째 자리까지)** |
-| 14 | `ch14_why_not_ae`, `ch14_gan` | **손실이 오르는데 결과는 좋아진다** |
+| 2 | [`ch02_perceptron`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch02/ch02_perceptron.ipynb) | 델타 규칙 → 프레임워크, XOR |
+| 3 | [`ch03_backend_swap`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch03/ch03_backend_swap.ipynb), [`ch03_three_frameworks`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch03/ch03_three_frameworks.ipynb) | 세 판 대조, Keras 백엔드 전환 |
+| 5 | [`ch05_depth`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch05/ch05_depth.ipynb), [`ch05_init`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch05/ch05_init.ipynb), [`ch05_learning_rate`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch05/ch05_learning_rate.ipynb) | **깊이의 벽은 학습률이었다** |
+| 6 | [`ch06_batchnorm`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch06/ch06_batchnorm.ipynb), [`ch06_overfitting`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch06/ch06_overfitting.ipynb), [`ch06_regularization`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch06/ch06_regularization.ipynb) | 규제, 배치 정규화의 진짜 일 |
+| 7 | [`ch07_metrics`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch07/ch07_metrics.ipynb), [`ch07_selection_bias`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch07/ch07_selection_bias.ipynb) | **선택 편향은 「몇 번 골랐나」** |
+| 8 | [`ch08_datasets`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch08/ch08_datasets.ipynb), [`ch08_dnn_vs_cnn`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch08/ch08_dnn_vs_cnn.ipynb), [`ch08_mnist`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch08/ch08_mnist.ipynb), [`ch08_no_activation`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch08/ch08_no_activation.ipynb) | **활성화를 빼도 최대 풀링이 비선형** |
+| 9 | [`ch09_gradcam`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch09/ch09_gradcam.ipynb), [`ch09_imagenet`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch09/ch09_imagenet.ipynb), [`ch09_pretrained`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch09/ch09_pretrained.ipynb), [`ch09_transfer`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch09/ch09_transfer.ipynb) | 전이학습, Grad-CAM |
+| 10 | [`ch10_forecast`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch10/ch10_forecast.ipynb), [`ch10_lr`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch10/ch10_lr.ipynb), [`ch10_memory`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch10/ch10_memory.ipynb), [`ch10_seed`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch10/ch10_seed.ipynb) | **★ 시드만 바꿔도 0.46↔1.00** |
+| 11 | [`ch11_embedding_space`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch11/ch11_embedding_space.ipynb), [`ch11_representation`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch11/ch11_representation.ipynb) | **임베딩만으로는 순서를 못 본다** |
+| 12 | [`ch12_attention`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch12/ch12_attention.ipynb), [`ch12_length`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch12/ch12_length.ipynb), [`ch12_lr_trap`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch12/ch12_lr_trap.ipynb), [`ch12_weights`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch12/ch12_weights.ipynb) | **어텐션도 순서를 못 본다 → 위치 부호화** |
+| 13 | [`ch13_anomaly`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch13/ch13_anomaly.ipynb), [`ch13_anomaly_ood`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch13/ch13_anomaly_ood.ipynb), [`ch13_autoencoder`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch13/ch13_autoencoder.ipynb), [`ch13_denoise`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch13/ch13_denoise.ipynb) | **선형 AE = PCA (넷째 자리까지)** |
+| 14 | [`ch14_gan`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch14/ch14_gan.ipynb), [`ch14_why_not_ae`](https://github.com/dhrim/deep-learning-in-one-semester/blob/main/notebooks/keras/ch14/ch14_why_not_ae.ipynb) | **손실이 오르는데 결과는 좋아진다** |
 
 ---
 
 ## 이 저장소의 규율
 
-### ① 본문의 숫자를 손으로 옮겨 적지 않습니다
+### ① 본문의 숫자에는 이름이 붙어 있습니다
 
 ```python
 acc = metrics.accuracy(y_test, pred)
-dlbook.record("ch11_lstm_acc", acc)      # → expected.json 과 대조
+dlbook.record("ch11_lstm_acc", acc)      # 출력: ch11_lstm_acc = 0.9123
 ```
+
+본문이 인용한 숫자가 **어느 노트북의 어느 줄에서 나왔는지** 이름으로 찾아갑니다.
+그리고 그 줄이 노트북 출력에 그대로 남아 있습니다.
 
 **이 규율이 실제로 초고의 오류를 네 번 잡았습니다.**
 
@@ -110,6 +126,13 @@ dlbook.record("ch11_lstm_acc", acc)      # → expected.json 과 대조
 실습 60분 안에 **돌리고 → 바꿔서 다시 돌리고 → 견주기**가
 들어가야 하기 때문입니다. `run_notebooks.py` 가 600초를 넘으면
 경고합니다.
+
+CPU 2코어 기준 실측으로 **35개 중 34개가 7분 안**에 끝납니다.
+
+**`ch08_datasets` 하나만 8~11분이 걸리고, 이것은 줄이지 않습니다.**
+데이터셋 셋(합성 도형·MNIST·CIFAR-10)에 DNN과 CNN을 각각 돌리는 실습입니다.
+CIFAR-10이 이만큼 걸린다는 것도 학생이 겪어 봐야 할 사실입니다.
+숫자로 「무겁다」고 읽는 것과 8분을 기다려 보는 것은 다릅니다.
 
 ### ③ 플랫폼 중립 8규칙
 
@@ -143,8 +166,8 @@ python tools/lint_notebooks.py notebooks/
 # 세 판 절 구성 대조
 python tools/check_parity.py
 
-# 실행 + 수치 대조
-python tools/run_notebooks.py notebooks/keras --check-expected
+# 실행하고 결과를 노트북에 담기 (출간·버전 갱신 때만)
+python tools/run_notebooks.py notebooks/keras --write-back
 
 # CI용 축소 실행 (epoch 1, 데이터 1/20)
 python tools/run_notebooks.py notebooks/keras --smoke

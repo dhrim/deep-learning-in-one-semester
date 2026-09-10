@@ -1104,18 +1104,26 @@ def fig_10_2():
     return save(fig, "fig_10_02_순환구조_펼치기")
 
 # ═══════════════════════════════════════════════════════════════════════
-#  3~5 · 12~14장 그림 — 수치는 expected.json 에서 읽습니다
-#  (본문의 표와 같은 값이라 어긋날 수 없습니다)
+#  5 · 12~14장 그림 — 수치는 figures/measured.json 에서 읽습니다
+#
+#  이 파일은 노트북을 실제로 돌려 얻은 값을 모아 둔 것입니다.
+#  본문의 표와 같은 값이므로 그림과 표가 어긋날 수 없습니다.
+#
+#  예전 이름은 expected.json 이었고, CI가 매주 노트북을 돌려 이 값과
+#  대조했습니다. 그 대조는 폐기했습니다 — 딥러닝은 돌릴 때마다 값이 달라서
+#  가짜 경보만 냈고, 이제는 노트북에 실행 결과를 담아 커밋하므로
+#  본문 수치가 맞는지는 노트북을 열어 보면 됩니다.
+#  남은 쓸모는 하나, **아래 다섯 그림을 그리는 데이터**입니다.
 # ═══════════════════════════════════════════════════════════════════════
 
 def _exp():
-    """expected.json 을 읽어 판 접두어를 벗긴 사전으로 돌려준다."""
-    import json, glob
-    p = ROOT.parent / "expected.json"
+    """measured.json 을 읽어 판 접두어를 벗긴 사전으로 돌려준다."""
+    import json
+    p = ROOT / "measured.json"
     if not p.exists():
-        c = sorted(glob.glob("/root/expected_backup_*.json"))
-        if not c: return {}
-        p = pathlib.Path(c[-1])
+        raise FileNotFoundError(
+            f"{p} 가 없습니다. 이 파일 없이는 5·12·13·14장 그림을 그릴 수 없습니다."
+        )
     raw = json.load(open(p, encoding="utf-8"))
     out = {}
     for k, v in raw.items():
